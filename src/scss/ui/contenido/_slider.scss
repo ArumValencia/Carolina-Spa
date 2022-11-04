@@ -1,0 +1,31 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.slider {
+    position: relative;
+    overflow: hidden;
+
+    &__slide {
+        height: 100%;
+        width: 100%;
+        flex-shrink: 0;
+        position: relative;
+        transition-property: transform;
+    }
+    &__imagen {
+        width: 100%;
+    }
+
+    //las siguentes clases son las de swiper se pueden ver inspeccionando el elemento
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: v.$blanco;
+    }
+    .swiper-pagination-bullet {
+        background-color: v.$blanco;
+        opacity: .5;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: v.$primario;
+    }
+}
